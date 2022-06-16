@@ -1,0 +1,50 @@
+.login{
+    font-size: 40px;
+    font-family:monospace;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(0%,20%);
+  
+    
+    
+}
+.legand{
+    padding-right:50px;
+    padding-left: 50px;
+  }
+
+  .email{
+    font-size: 20px;
+    font-family: sans-serif;
+   
+}
+.password{
+    font-size: 20px;
+    font-family: sans-serif;
+}
+
+    .button{
+        font-size: 20px;
+        font-family: sans-serif;
+        padding-right:auto;
+        padding-left: auto;
+        margin-left: 100px;
+        margin-right: 50px;
+ 
+}
+.bt p{
+    font-size: 20px;
+    text-align: center;
+   margin-bottom: 5px;
+}
+a:link {
+    color: black;
+    }
+    a:visited {
+    color: black;
+    }
+a{
+    text-decoration:none;
+}
