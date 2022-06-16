@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/product.css">
+    <script src="js/comment.js"></script>
+</head>
+<body>
+    <header id = head>        
+        <h1><a href="index.html">I DOT CAR</a></h1>
+            <div class="iconbox">
+                <a href="login.html"><img src="assets/images/man.jpg" alt="user"></a>
+                <a href="cart.html"><img src="assets/images/shop2.png" alt="cart"></a>
+            </div>
+
+        <nav>
+            <ul class="list">                
+                <li><a href="top.html" class="listplace">銷售排行</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                
+                <li><a href="top.html#here">熱門車型</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <li><a href="member.html" class="listplace">會員專區</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <li><a href="about.html" class="listplace">關於我們</a></li>
+                          
+            </ul>
+        </nav>
+    </header><br/>
+
+    <main>
+        <!-- 各車資訊 -->
+        <div class="big">
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;2022 Rolls-Royce Ghost 6.75 V12 SWB</h1>
+            <h1 style="color:rgb(220, 27, 27)">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$ 2099萬 </h2>
+            <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;牌照稅 $ 111,700元 燃料稅 $ 14,910元</h2>                        
+        </div>
+
+        <div class="container">            
+            <div class="row">
+                <div class="row-left">
+                    <div class="left-img">
+                        <!-- 車輪播圖 -->
+                        <div id="banner">    
+                            <div id="tab">
+                                <img class="tabImg" src="assets/images/list1.jpeg" >
+                                <img class="tabImg" src="assets/images/list2.jpeg" >
+                                <img class="tabImg" src="assets/images/list3.jpeg" >
+                                <img class="tabImg" src="assets/images/list4.jpeg" >
+                            </div>
+
+                            <div class="lunbo_btn">
+                                <span num="0" class="tabBtn hover"></span>
+                                <span num="1" class="tabBtn"></span>
+                                <span num="2" class="tabBtn"></span>
+                                <span num="3" class="tabBtn"></span>
+                            </div>    
+                        
+                            <div class="arrow prve">
+                                <span class="slider_left"></span>
+                            </div>
+                            <div class="arrow next">
+                                <span class="slider_right"></span>
+                            </div>    
+                        </div>
+                        <script type="text/javascript"> 
+                            var curIndex=0;
+                            var img_number = document.getElementsByClassName('tabImg').length;
+                            var _timer = setInterval(runFn,2000);
+                            function runFn(){      
+                                curIndex = ++curIndex == img_number ? 0 : curIndex;
+                                slideTo(curIndex);
+                             }
+                             
+                        
+                             window.onload = function  () {  
+                                var tbs = document.getElementsByClassName("tabBtn");
+                                for(var i=0;i<tbs.length;i++){
+                                    tbs[i].onclick = function  () {
+                                        clearInterval(_timer);
+                                        slideTo(this.attributes['num'].value);
+                                        curIndex = this.attributes['num'].value
+                                        _timer = setInterval(runFn,2000);
+                                    }
+                                }
+                            }
+                        
+                            var prve = document.getElementsByClassName("prve");
+                            prve[0].onclick = function () {
+                                clearInterval(_timer);
+                                curIndex--;
+                                if(curIndex == -1){
+                                    curIndex = img_number-1;
+                                }
+                                slideTo(curIndex);
+                                _timer = setInterval(runFn,2000);
+                            }
+                            
+                            var next = document.getElementsByClassName("next");
+                            next[0].onclick = function () {
+                                clearInterval(_timer);
+                                curIndex++;
+                                if(curIndex == img_number){
+                                    curIndex =0;
+                                }
+                                slideTo(curIndex);
+                                _timer = setInterval(runFn,2000);
+                            }
+                            
+                            function slideTo(index){
+                                console.log(index)
+                                var index = parseInt(index);
+                                var images = document.getElementsByClassName('tabImg');
+                                for(var i=0;i<images.length;i++){
+                                    if( i == index ){
+                                        images[i].style.display = 'inline';     
+                                    }else{
+                                        images[i].style.display = 'none';
+                                    }
+                                }
+                                var tabBtn = document.getElementsByClassName('tabBtn');
+                                for(var j=0;j<tabBtn.length;j++){
+                                    if( j == index ){
+                                        tabBtn[j].classList.add("hover");    
+                                        curIndex=j;
+                                    }else{
+                                        tabBtn[j].classList.remove("hover");
+                                    }
+                                }
+                                
+                            }
+                        </script>                        
+                    </div></br></br>
+                    <!-- 介紹文字 -->
+                    <div class="left-text">
+                        <h2>車款介紹</h2>                        
+                        <p>
+                            Ghost的車身由四位工匠同步焊接，一氣呵成。配以100％全鋁鐳射焊接門，
+                            Ghost車身更輕盈卻更堅固，其硬度可達40,000Nm/deg。此外，Ghost車身採
+                            用的鋁製材料相較於鋼材具有更為卓越的聲阻表現，為車內靜謐性締造全新境
+                            界。勞斯萊斯為Ghost傾心締造了6.75升雙渦輪增壓V12汽油引擎，可輸出高達
+                            571匹馬力及86.7kgm的最大扭力。為實現車內靜謐性的極致精進，Ghost進氣
+                            系統採用更寬大的進氣口，以降低發動機雜訊，構建頂級靜謐聲場。Ghost的
+                            LED及鐳射頭燈照明範圍超600米，視野輔助系統（Vision assist）可全天候
+                            預警行駛前方可能穿過的行人及野生動物。預警輔助系統、全方位可視及全景
+                            俯視的四攝像頭全景監控系統、主動巡航控制系統、碰撞警報、交叉路口預警
+                            、車道偏離與變道預警、先進的高解析度抬頭顯示器、Wi-Fi熱點、自動泊車、
+                            最新一代導航和娛樂系統等不勝枚舉的頂尖配置皆匯於Ghost之中。
+
+                        </p>
+                    </div>
+                </div>
+                <!-- 規格表格 -->
+                <div class="row-right">
+                    <div class="right-text">
+                        <table class="detail">
+                            <tr>
+                                <td class="red">車身座位</td>
+                                <td> 4門5人座&nbsp;&nbsp;&nbsp;</td>
+                                <td class="red">排氣量</td>
+                                <td> 6749cc</td>
+                            </tr>
+                            <tr>
+                                <td class="red">變速系統</td>
+                                <td> 8速自排&nbsp;&nbsp;&nbsp;</td>
+                                <td class="red">產地</td>
+                                <td>進口</td>
+                            </tr>
+                            
+                        </table>
+                        <table class="detail">
+                            <tr>
+                                <td class="red">引擎形式</td>
+                                <td> 渦輪增壓, V型12缸, DOHC雙凸輪軸, 48氣門</td>
+                            </tr>
+                            <tr>
+                                <td class="red">性能數據</td>
+                                <td>571hp@5000rpm 86.7kgm@1600rpm</td>
+                            </tr>
+                            <tr>
+                                <td class="red">能量消耗</td>
+                                <td> 平均 6.6km/ltr 市區 3.71km/ltr 高速 8.14km/ltr</td>
+                            </tr>
+                        </table></br>
+                        <div class="go">
+                            <h2>預約賞車</h2>
+                        </div>
+                        <!-- 預約按鈕 -->
+                        <form action="">
+                            <div class="btn">                            
+                                <input type="submit" class="button" value="RESERVE NOW">                                    
+                                
+                            </div>
+                        </form>                                                                                                        
+                    </div>
+
+                    <!-- 其他人還看了 -->
+                    <div class="right-others">
+                        <h4>其他人還看了</h4>
+                        <a href=""><img src="assets/images/list1.jpeg" alt="user"></a>
+                    </div>
+                </div>
+                
+            </div>            
+        </div>
+        <!-- 星星 -->
+        <ul class="star_comment">
+            <li class="product_starlevel">
+                <div class="stars">
+                    
+                    <form action="addboard.jsp" class="star_commentbox">
+                        <h1>COMMENT</h1>                            
+                        <div class="rating">
+                            <input type="radio" id="star5" name="rating" value="5" hidden>
+                            <label for="star5"></label>
+                            <input type="radio" id="star4" name="rating" value="4" hidden>
+                            <label for="star4"></label>
+                            <input type="radio" id="star3" name="rating" value="3" hidden>
+                            <label for="star3"></label>
+                            <input type="radio" id="star2" name="rating" value="2" hidden>
+                            <label for="star2"></label>
+                            <input type="radio" id="star1" name="rating" value="1" hidden>
+                            <label for="star1"></label>
+                        </div>	
+                        <input type="text" placeholder="評論" name="comment" required><br/>
+                        <input type="submit" value="送出" class="send">
+                    </form>
+                </div>
+            </li>
+        </ul>
+        <!-- 顧客評論 -->
+        <div class="customer">           
+            <div class="comment">
+                <div class="comments_container">
+                    <img src="assets/images/man.jpg">
+                    <p class="comments_stars">★★★★</p>
+                    <p class="comments_content">夢想中的好車</p>
+                </div>
+            </div>
+        </div>
+        
+        <button class="js-back-to-top back-to-top" title="回到頭部">&#65085;</button>
+        <script src="https://cdn.staticfile.org/jquery/2.2.4/jquery.min.js"></script>
+        <script>
+            $(function () {            
+            var $win = $(window);            
+            var $backToTop = $('.js-back-to-top');            
+            // 當用戶滾動到離頂部100像素時，展示回到頂部按鈕            
+            $win.scroll(function () {            
+            if ($win.scrollTop() > 100) {            
+            $backToTop.show();            
+            } else {            
+            $backToTop.hide();            
+            }            
+            });            
+            // 當用戶點擊按鈕時，通過動畫效果返回頭部            
+            $backToTop.click(function () {            
+            $('html, body').animate({scrollTop: 0}, 200);            
+            });            
+            });            
+        </script>    
+    </main>
+    <footer>
+        <div class="copyright">
+            <p>Copyright &copy; 2022 I DOT CAR</p>
+        </div>
+    </footer>
+</body>
+</html>

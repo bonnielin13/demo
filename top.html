@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>topsale</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/top.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+
+</head>
+<body>
+    <header>        
+        <h1><a href="index.jsp">I DOT CAR</a></h1>
+            <div class="iconbox">
+                <a href="login.html"><img src="assets/images/man.jpg" alt="user"></a>
+                <a href="cart.jsp"><img src="assets/images/shop2.png" alt="cart"></a>
+            </div>
+
+        <nav>
+            <ul class="list">                
+                <li><a href="top.jsp" class="listplace">銷售排行</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                
+                <li><a href="#here">熱門車型</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <li><a href="member.jsp" class="listplace">會員專區</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <li><a href="about.html" class="listplace">關於我們</a></li>                          
+            </ul>
+        </nav>
+    </header></br>
+    <main>
+        <!--輪播圖-->
+        <div class="coverflow">
+            <a href="#"><img src="assets/images/cool1.jpeg"></a>
+            <a href="#"><img src="assets/images/cool2.jpeg"></a>
+            <a href="#"><img src="assets/images/cool3.jpeg"></a>
+        </div></br>
+        <div class="containers">
+            <h1>&nbsp;&nbsp;&nbsp;銷售排行 TOP3</h1>
+            <div class="row">                
+                    <a href="product.html">                        
+                        <div class="cars">
+                            <div class="pic">
+                                <img src = "assets/images/list1.jpeg">
+                            </div>
+                            <div class="text">
+                                <h2>&nbsp;&nbsp;Rolls-Royce Ghost 6.75 V12 SWB</h2>
+                            </div>
+                        </div>
+                    </a>            
+                
+                <a href="product.html">
+                    <div class="cars">
+                        <div class="pic">
+                            <img src = "assets/images/list5.jpeg">
+                        </div>
+                        <div class="text">
+                            <h2> Ferrari Roma V8</h2>
+                        </div>
+                    </div>            
+                </a>
+                <a href="product.html">
+                    <div class="cars">
+                        <div class="pic">
+                            <img src = "assets/images/list9.jpeg">
+                        </div>
+                        <div class="text">
+                            <h2>&nbsp;&nbsp;&nbsp;Audi R8 Coupe V10 Performance</h2>
+                        </div>
+                    </div>            
+                </a>
+                
+            </div>
+        </div>
+        
+        <!-- 下三排車 -->
+        <div class="containers">
+            <div id="here" name="here"></div>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;熱門車型</h1>
+            <div class="row">
+                <a href="product.html">
+                    <div class="cars">
+                        <div class="pic">
+                            <img src = "assets/images/list13.jpeg">
+                        </div>
+                        <div class="text">
+                            <h2>&nbsp;&nbsp;Bentley Continental GT Speed 6.0</h2>
+                        </div>
+                    </div>
+                </a>
+                <a href="product.html">
+                    <div class="cars">
+                        <div class="pic">
+                            <img src = "assets/images/list17.jpeg">
+                        </div>
+                        <div class="text">
+                            <h2> Porsche 911 Turbo S Coupe</h2>
+                        </div>
+                    </div>            
+                </a>
+                <a href="product.html">
+                    <div class="cars">
+                        <div class="pic">
+                            <img src = "assets/images/list21.jpeg">
+                        </div>
+                        <div class="text">
+                            <h2>&nbsp;Aston Martin DB11 Volante 4.0V8</h2>
+                        </div>
+                    </div>            
+                </a>
+                
+            </div>            
+        </div>
+        
+        <button class="js-back-to-top back-to-top" title="回到頭部">&#65085;</button>
+        <script src="https://cdn.staticfile.org/jquery/2.2.4/jquery.min.js"></script>
+        <script>
+            $(function () {            
+            var $win = $(window);            
+            var $backToTop = $('.js-back-to-top');            
+            // 當用戶滾動到離頂部100像素時，展示回到頂部按鈕            
+            $win.scroll(function () {            
+            if ($win.scrollTop() > 100) {            
+            $backToTop.show();            
+            } else {            
+            $backToTop.hide();            
+            }            
+            });            
+            // 當用戶點擊按鈕時，通過動畫效果返回頭部            
+            $backToTop.click(function () {            
+            $('html, body').animate({scrollTop: 0}, 200);            
+            });            
+            });            
+        </script>
+    </main>
+    <footer>
+        <div class="copyright">
+            <p>Copyright &copy; 2022 I DOT CAR</p>
+        </div>
+    </footer>
+
+</body>
+</html>

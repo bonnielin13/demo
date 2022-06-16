@@ -1,0 +1,45 @@
+.register{
+    font-size: 40px;
+    font-family:monospace;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(0%,20%);
+  
+    
+}
+.rg{
+    padding-right:50px;
+    padding-left: 50px;
+  }
+.first{
+    font-size: 20px;
+    font-family: sans-serif;
+   
+}
+  .last{
+      font-size: 20px;
+      font-family: sans-serif;
+     
+  }
+  .email{
+    font-size: 20px;
+    font-family: sans-serif;
+   
+}
+  .password{
+      font-size: 20px;
+      font-family: sans-serif;
+     
+  }
+
+  .button{
+      font-size: 20px;
+      font-family: sans-serif;
+      padding-right:auto;
+      padding-left: auto;
+      margin-left: 100px;
+      margin-right: 50px;
+  }
+  
